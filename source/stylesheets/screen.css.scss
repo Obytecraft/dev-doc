@@ -36,6 +36,14 @@ html, body {
   -webkit-text-size-adjust: none; /* Never autoresize text */
 }
 
+//// for user defined tables
+
+tr {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-collapse: collapse;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
