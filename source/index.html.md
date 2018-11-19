@@ -135,6 +135,20 @@ software issues.
 You will spend a whole or half a day with your technical lead. It's his / her responsibility to aid you in integrating into 
 the technical environment of Decathlon. Be ready to spend a lot of time with him / her. You will be introduced to most of the tools which you will be working with. 
 
+1. Introduction to developer portals. eg(Api-portal, Slack chats channels?)
+2. Introduction to CI/CD (Jenkins, Rancher)
+3. Introduction to development stack and tools.
+    * Java    
+    * Spring-Boot
+    * Redis
+    * ActiveMQ
+    * Docker
+    * IntelliJ IDE
+5. Set up development accounts 
+    * LDAP Account
+    * AWS Gateway Account
+    * GitLab
+
 
 
 # Know Your Mentor
@@ -164,9 +178,7 @@ that will help you be more efficient.
 1. <a href ="https://api-portal.preprod.subsidia.org ">Decathlon API Portal</a>
 2. <a href ="https://developers.decathlon.com/">Decathlon Developer Website</a>
 
-
 ## Good Reads
 
 1. <a href ="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker File Standardization</a>
-
 2. <a href = "https://docs.google.com/document/d/1TgTmP--GI2s1QLCsO5bMIHiu1-mO_uqpIAGtmSOlYio/edit">RedShift Cheat Sheet</a>
