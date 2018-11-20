@@ -1,0 +1,24 @@
+pipeline{
+      agent any
+        stage ('Check Code') {
+            steps
+            {
+                script{
+                    echo 'Check code';
+                    checkout sum
+
+                    if (env.BRANCH_NAME == 'master') {
+                        echo 'Okay'
+;                    }
+                }
+            }
+        }
+    
+    
+    stage 'Install Gems'
+    stage 'Prepare Database'
+    stage 'Invoke Rake'
+    stage 'Security scan'
+    stage 'Deploy'
+}
+  
