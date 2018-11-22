@@ -94,8 +94,6 @@ I challenge my product technical choices by the community (Tech N Talents)</td>
  </table>
 
 
-
-
 # Development Kit
 
 We have reviewed the following tools and we are sure this is what you need as a developer. The review

@@ -14,7 +14,7 @@ pipeline{
         stage('Deploy To Rancher'){
             steps {
                 withEnv(["BUILD_NUMBER=${env.BUILD_NUMBER}"]){
-                    
+                    // connection here. 
                 }
             }
         }
