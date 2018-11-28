@@ -4,6 +4,7 @@ the technical environment of Decathlon. Be ready to spend a lot of time with him
 
 1. Introduction to developer portals. eg(Api-portal, Slack chats channels?)
 2. Introduction to CI/CD (Jenkins, Rancher)
+    <a href ="https://tech-china-doc.subsidia.org/#what-is-ci-cd">CI/CD Documentation</a>
 3. Introduction to development stack and tools.
     * Java    
     * Spring-Boot
