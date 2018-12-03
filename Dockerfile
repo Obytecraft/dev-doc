@@ -6,7 +6,7 @@ EXPOSE 4567
 
 WORKDIR /usr/src/app
 
-RUN docker-machine restart
+RUN service docker restart
 
 RUN apt-get update && apt-get install -y nodejs \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
