@@ -25,7 +25,16 @@ pipeline{
             }
         }
 
-        stage('build docker image and upload'){
+        stage('Clean up workspace'){
+            steps {
+                cleanWs()
+            }
+        }
+
+    }
+}
+
+        /* stage('build docker image and upload'){
             steps{
                 echo 'build docker image and upload'
                 echo 'version number : ${image_version}'
@@ -40,14 +49,14 @@ pipeline{
                }
             }
         }
-
-        stage('clean the docker image'){
+ */
+       /*  stage('clean the docker image'){
             steps {
                 sh "docker rmi -f dev-induction_app:latest"
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:latest"
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
             }
-        }
+        } */
 
         /* stage('Preprare Rancher deployment PP'){
             when { branch 'master' }
@@ -78,11 +87,4 @@ pipeline{
 
         }
  */
-        stage('Clean up workspace'){
-            steps {
-                cleanWs()
-            }
-        }
 
-    }
-}
