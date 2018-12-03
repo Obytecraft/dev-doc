@@ -47,7 +47,7 @@ pipeline{
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:latest"
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
             }
-
+        }
         stage('Clean up workspace'){
             steps {
                 cleanWs()
