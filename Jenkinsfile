@@ -31,8 +31,12 @@ pipeline{
                 echo 'version number : ${image_version}'
                script {
                    def image
-                   image = docker.build("dev-induction_app:latest",".")
-
+                   if (env.BRANCH_NAME == 'master') {
+                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
+                    } else {
+                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
+                   }
+                   
                    docker.withRegistry('https://registry-cn-local.subsidia.org','nexusAccount'){
                        image.push("${image_version}")
                        image.push("latest")
