@@ -48,21 +48,8 @@ pipeline{
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
             }
         }
-        stage('Clean up workspace'){
-            steps {
-                cleanWs()
-            }
-        }
-    }
-}
 
-
-        /* 
- */
-       /*  
-        } */
-
-        /* stage('Preprare Rancher deployment PP'){
+        stage('Preprare Rancher deployment PP'){
             when { branch 'master' }
             steps{
                echo "downloading cli component"
@@ -71,9 +58,9 @@ pipeline{
                sh "mv rancher-compose-${compose_version}/rancher-compose . && rm -rf rancher-compose-${compose_version}"
                sh "mv rancher-${cli_version}/rancher . && rm -rf rancher-${cli_version}"
             }
-        } */
+        }
 
-/*         stage('Deploy To Rancher PP'){
+        stage('Deploy To Rancher PP'){
             when { branch 'master' }
             steps{
                 script {
@@ -90,5 +77,13 @@ pipeline{
             }
 
         }
- */
+
+        stage('Clean up workspace'){
+            steps {
+                cleanWs()
+            }
+        }
+    }
+}
+
 
