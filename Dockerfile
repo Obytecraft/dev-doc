@@ -6,8 +6,11 @@ EXPOSE 4567
 
 WORKDIR /usr/src/app
 
-RUN apt-get update && apt-get install -y nodejs \
-&& apt-get clean && rm -rf /var/lib/apt/lists/*
+# RUN npm config set proxy ${HTTP_PROXY}
+# RUN npm config set proxy ${HTTPS_PROXY}
+RUN pkg install node
+# RUN apt-get update && apt-get install -y nodejs \
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN bundle install
 
 CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
