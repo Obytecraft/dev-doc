@@ -27,25 +27,6 @@ pipeline{
             }
         }
 
-        /* stage('build scripts'){
-            steps{
-                nodejs('nodejs'){
-                    script{
-                        if(env.BRANCH_NAME == 'master'){
-                            sh "export NODE_ENV=production"
-                        }
-                        sh "node -v"
-                        sh "npm config set registry http://registry.npmjs.org/"
-                        sh "npm config set proxy http://proxy-internet-aws-china-production.subsidia.org:3128"
-
-                        sh "npm install phantomjs-prebuilt@2.1.13 --ignore-scripts"
-                        sh "npm install chromedriver --ignore-scripts"
-                        sh "npm install"
-                        sh "npm run build"
-                    }
-                }
-            }
-        } */
 
         stage('build docker image and upload'){
             steps{
