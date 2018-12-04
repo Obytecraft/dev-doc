@@ -55,7 +55,7 @@ pipeline{
             }
         }
 
-        stage('Preprare Rancher deployment PP')
+        stage('Preprare Rancher deployment PP'){
             steps{
                echo "downloading cli component"
                sh "wget http://nexus.osiris.withoxylane.com/service/local/repositories/utils/content/rancher/rancher-compose-linux-amd64-${compose_version}.tar.gz -O - | tar -zx"
