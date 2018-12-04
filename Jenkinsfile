@@ -76,7 +76,7 @@ pipeline{
                     }
                     sh "sed -i \"s/${image_name}:.*\$/${image_name}:${image_version}/g\" docker-compose.yml"
                     sh "sed -i '/dev-induction:/a \\ \\ \\ \\ upgrade_strategy:\\n\\r\\ \\ \\ \\ \\ \\ start_first: true' rancher-compose.yml"
-                    sh "./rancher-compose --project-name ${stack_name} --url http://rancher.preprod.subsidia.org --access-key 8F4C8E0E04BA75FC7EFE --secret-key hzKSb6Z9AcoqDbHtWpxkmxVeK9zXPrgaqJdvqo25 --verbose up -d --force-upgrade --pull --confirm-upgrade dev-induction_app"
+                    sh "./rancher-compose --project-name ${stack_name} --url http://rancher.preprod.subsidia.org --access-key 8F4C8E0E04BA75FC7EFE --secret-key hzKSb6Z9AcoqDbHtWpxkmxVeK9zXPrgaqJdvqo25 --verbose up -d --force-upgrade --pull --confirm-upgrade dev-induction"
                 }
             }
 
