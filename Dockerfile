@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 RUN sed -i "s/httpredir.debian.org/mirrors.tuna.tsinghua.edu.cn/" /etc/apt/sources.list
 RUN apt-get clean
-RUN apt-get update 
+# RUN apt-get update 
 RUN apt-get upgrade -y
 RUN apt-get dist-upgrade -y
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
