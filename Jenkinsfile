@@ -15,13 +15,13 @@ pipeline{
                 echo 'checkout code';
                 checkout scm
 
-               /*  if (env.BRANCH_NAME != 'master') {
+                if (env.BRANCH_NAME != 'master') {
                     image_version = "snapshot-${env.BRANCH_NAME}-${env.BUILD_NUMBER}"
                     image_version = image_version.replace('/','-')
                 }else {
                     image_version = "${env.BUILD_NUMBER}"
                     
-                } */
+                }
             }
         }
 
@@ -32,9 +32,9 @@ pipeline{
                script {
                    def image
                    if (env.BRANCH_NAME == 'master') {
-                        image = docker.build("membership/dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
+                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
                     } else {
-                        image = docker.build("membership/dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
+                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
                    }
 
                    docker.withRegistry('https://registry-cn-local.subsidia.org','nexusAccount'){
@@ -48,8 +48,8 @@ pipeline{
         stage('clean the docker image'){
             steps {
                 sh "docker rmi -f dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/membership/dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/membership/dev-induction_app:${image_version}"
+                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:latest"
+                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
             }
         }
 
