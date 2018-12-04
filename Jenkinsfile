@@ -27,7 +27,7 @@ pipeline{
             }
         }
 
-        stage('build scripts'){
+        /* stage('build scripts'){
             steps{
                 nodejs('nodejs'){
                     script{
@@ -45,7 +45,7 @@ pipeline{
                     }
                 }
             }
-        }
+        } */
 
         stage('build docker image and upload'){
             steps{
