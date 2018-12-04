@@ -55,8 +55,7 @@ pipeline{
             }
         }
 
-        stage('Preprare Rancher deployment PP'){
-            when { branch 'master' }
+        stage('Preprare Rancher deployment PP')
             steps{
                echo "downloading cli component"
                sh "wget http://nexus.osiris.withoxylane.com/service/local/repositories/utils/content/rancher/rancher-compose-linux-amd64-${compose_version}.tar.gz -O - | tar -zx"
@@ -67,7 +66,6 @@ pipeline{
         }
 
         stage('Deploy To Rancher PP'){
-            when { branch 'master' }
             steps{
                 script {
                     try {
