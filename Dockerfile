@@ -14,6 +14,9 @@ RUN more "/etc/environment"
 #RUN locale-gen en_US en_US.UTF-8
 #RUN dpkg-reconfigure locales
 
+ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
+ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
+
 
 RUN apt-get clean
 RUN sed -i "s/httpredir.debian.org/mirrors.tuna.tsinghua.edu.cn/" /etc/apt/sources.list
