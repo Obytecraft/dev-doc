@@ -14,9 +14,10 @@ RUN more "/etc/environment"
 #RUN locale-gen en_US en_US.UTF-8
 #RUN dpkg-reconfigure locales
 
-RUN sed -i "s/httpredir.debian.org/mirrors.tuna.tsinghua.edu.cn/" /etc/apt/sources.list
+
 RUN apt-get clean
-# RUN apt-get update 
+RUN sed -i "s/httpredir.debian.org/mirrors.tuna.tsinghua.edu.cn/" /etc/apt/sources.list
+RUN apt-get -y update 
 RUN apt-get upgrade -y
 RUN apt-get dist-upgrade -y
 RUN curl -sL https://deb.nodesource.com/setup_10.x | bash
@@ -27,7 +28,7 @@ RUN npm i -g nodemon
 RUN nodemon -v
 
 # Cleanup
-RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
+# RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
 RUN bundle install
 
 CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
