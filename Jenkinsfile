@@ -3,7 +3,7 @@
 def image_version = ''
 def cli_version = 'v0.5.0'
 def compose_version = 'v0.12.4'
-def image_name = 'dev-induction_app'
+def image_name = 'membership\\/dev-induction_app'
 def stack_name = 'membership' 
 
 pipeline{
@@ -32,11 +32,11 @@ pipeline{
                script {
                    def image
                    if (env.BRANCH_NAME == 'master') {
-                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
+                        image = docker.build("membership/dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
                     } else {
-                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
+                        image = docker.build("membership/dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
                    }
-                   
+
                    docker.withRegistry('https://registry-cn-local.subsidia.org','nexusAccount'){
                        image.push("${image_version}")
                        image.push("latest")
@@ -48,8 +48,8 @@ pipeline{
         stage('clean the docker image'){
             steps {
                 sh "docker rmi -f dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
+                sh "docker rmi -f registry-cn-local.subsidia.org/membership/dev-induction_app:latest"
+                sh "docker rmi -f registry-cn-local.subsidia.org/membership/dev-induction_app:${image_version}"
             }
         }
 
