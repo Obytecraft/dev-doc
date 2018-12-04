@@ -49,7 +49,7 @@ pipeline{
 
         stage('clean the docker image'){
             steps {
-                sh "docker rmi -f dev-induction_app:latest"
+                sh "docker rmi -f dev-induction:latest"
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction:latest"
                 sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction:${image_version}"
             }
