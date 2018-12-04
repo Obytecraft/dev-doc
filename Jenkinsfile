@@ -3,7 +3,7 @@
 def image_version = ''
 def cli_version = 'v0.5.0'
 def compose_version = 'v0.12.4'
-def image_name = 'membership\\/dev-induction_app'
+def image_name = 'membership\\/dev-induction'
 def stack_name = 'membership' 
 
 pipeline{
@@ -34,9 +34,9 @@ pipeline{
                script {
                    def image
                    if (env.BRANCH_NAME == 'master') {
-                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
+                        image = docker.build("dev-induction:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")                   
                     } else {
-                        image = docker.build("dev-induction_app:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
+                        image = docker.build("dev-induction:latest", "--build-arg HTTP_PROXY=http://proxy-internet-aws-china-production.subsidia.org:3128 .")
                    }
 
                    docker.withRegistry('https://registry-cn-local.subsidia.org','nexusAccount'){
@@ -50,8 +50,8 @@ pipeline{
         stage('clean the docker image'){
             steps {
                 sh "docker rmi -f dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:latest"
-                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction_app:${image_version}"
+                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction:latest"
+                sh "docker rmi -f registry-cn-local.subsidia.org/dev-induction:${image_version}"
             }
         }
 
@@ -75,7 +75,7 @@ pipeline{
                         echo "Stack not found"
                     }
                     sh "sed -i \"s/${image_name}:.*\$/${image_name}:${image_version}/g\" docker-compose.yml"
-                    sh "sed -i '/dev-induction_app:/a \\ \\ \\ \\ upgrade_strategy:\\n\\r\\ \\ \\ \\ \\ \\ start_first: true' rancher-compose.yml"
+                    sh "sed -i '/dev-induction:/a \\ \\ \\ \\ upgrade_strategy:\\n\\r\\ \\ \\ \\ \\ \\ start_first: true' rancher-compose.yml"
                     sh "./rancher-compose --project-name ${stack_name} --url http://rancher.preprod.subsidia.org --access-key 8F4C8E0E04BA75FC7EFE --secret-key hzKSb6Z9AcoqDbHtWpxkmxVeK9zXPrgaqJdvqo25 --verbose up -d --force-upgrade --pull --confirm-upgrade dev-induction_app"
                 }
             }
