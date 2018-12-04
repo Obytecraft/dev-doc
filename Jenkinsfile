@@ -3,8 +3,8 @@
 def image_version = ''
 def cli_version = 'v0.5.0'
 def compose_version = 'v0.12.4'
-def image_name = 'membership\\/dev-induction'
-def stack_name = 'membership' 
+def image_name = 'dev-induction\\/dev-induction'
+def stack_name = 'dev-induction' 
 
 pipeline{
     agent any
