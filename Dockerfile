@@ -7,6 +7,13 @@ EXPOSE 4567
 WORKDIR /usr/src/app
 
 
+RUN echo "LC_ALL=en_US.UTF-8" >> /etc/environment
+RUN echo "LANG=en_US.UTF-8" >> /etc/environment
+RUN echo "NODE_ENV=development" >> /etc/environment
+RUN more "/etc/environment"
+#RUN locale-gen en_US en_US.UTF-8
+#RUN dpkg-reconfigure locales
+
 RUN sed -i "s/httpredir.debian.org/mirrors.tuna.tsinghua.edu.cn/" /etc/apt/sources.list
 RUN apt-get clean
 # RUN apt-get update 
