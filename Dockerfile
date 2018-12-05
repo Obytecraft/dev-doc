@@ -6,8 +6,8 @@ EXPOSE 4567
 
 WORKDIR /usr/src/app
 
-ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
-ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
+#ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
+#ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
 
 RUN apt-get update && apt-get install -y nodejs \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
