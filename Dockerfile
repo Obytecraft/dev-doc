@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y nodejs \
 && apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN bundle install
 
-CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
+CMD ["bundle", "exec", "middleman", "serve", "-bind-address 0.0.0.0", "--watcher-force-polling"]
