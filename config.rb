@@ -49,6 +49,10 @@ configure :build do
   # activate :gzip
 end
 
+configure :development do
+  activate :livereload, :host => '0.0.0.0', :port => '4567'
+end
+
 activate :directory_indexes
 
 # Deploy Configuration
