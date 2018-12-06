@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine AS middleman-builder
+FROM ruby:2.5-alpine AS dev-induction
 WORKDIR /usr/src/app
 ENV RAILS_ENV production
 
@@ -24,7 +24,7 @@ COPY . /usr/src/app
 RUN bundle exec middleman build --verbose
 
 FROM nginx:alpine
-COPY --from=middleman-builder /usr/src/app/build /usr/share/nginx/html 
+COPY --from=dev-induction /usr/src/app/build /usr/share/nginx/html 
 
 # VOLUME /usr/src/app
 
