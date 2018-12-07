@@ -20,6 +20,6 @@ ADD . /srv/www/
 RUN bundle install --clean --without development test
 RUN exec middleman build --verbose
 
-EXPOSE 80
+EXPOSE 4567
 
 CMD nginx
