@@ -5,7 +5,7 @@ ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
 
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository -y ppa:nginx/stable
+# RUN add-apt-repository -y ppa:nginx/stable
 
 RUN apt-get -y install nginx
 
