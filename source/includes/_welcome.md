@@ -26,7 +26,7 @@ The new digital world and customers : required lot of agility and reactivity
 
 Our Information System is not enough connected and connectable using a modular and service approach to provide this agility and reactivity.
 
-We need many skills and expertises to transform and move a step forward. And it will be complicated and not adapted to have all these skills in one place in the world. 
+We need many skills and expertise to transform and move a step forward. And it will be complicated and not adapted to have all these skills in one place in the world. 
 
 We have the ambition to build a network of skills and a network of solutions designers/responsible. 
 This network will use our existing Worldwide pool of teammates (In France, India, China, Spain …)  and at the target should let anybody having the possibility to contribute.

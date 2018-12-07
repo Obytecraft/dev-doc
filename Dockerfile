@@ -1,36 +1,22 @@
-FROM ruby:2.5-alpine AS dev-induction
-WORKDIR /usr/src/app
-ENV RAILS_ENV production
+FROM ruby:2.5.1
 
-EXPOSE 4567
+RUN apt-get update
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:nginx/stable
 
-ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
-ENV http_proxy "http://proxy-internet-aws-china-production.subsidia.org:3128"
+RUN apt-get -y install nginx
 
+RUN mkdir /srv/www
 
-RUN apk update && apk --update add ruby ruby-irb nodejs ruby-json ruby-rake \
-    ruby-bigdecimal ruby-io-console libstdc++ tzdata libffi-dev libxml2-dev libxslt-dev 
+ADD default /etc/nginx/sites-available/default
+ADD nginx.conf /etc/nginx/nginx.conf
 
-RUN apk add --virtual build-deps git build-base ruby-dev \
-    libc-dev linux-headers && \
-    gem install bundler --no-ri --no-rdoc && \
-    bundle config build.nokogiri --use-system-libraries
+WORKDIR /srv/www
 
-COPY Gemfile* /usr/src/app/
-#COPY source dest
-RUN bundle install --clean --without development test 
+ADD . /srv/www/
+RUN bundle install --clean --without development test
+RUN exec middleman build --verbose
 
-COPY . /usr/src/app
-RUN bundle exec middleman build --verbose
+EXPOSE 80
 
-FROM nginx:alpine
-COPY --from=dev-induction /usr/src/app/build /usr/share/nginx/html 
-
-# VOLUME /usr/src/app
-
-
-# RUN apt-get update && apt-get install -y nodejs \
-# && apt-get clean && rm -rf /var/lib/apt/lists/*
-# RUN bundle install
-
-# CMD ["bundle", "exec", "middleman", "server", "--watcher-force-polling"]
+CMD nginx
