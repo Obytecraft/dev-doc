@@ -11,7 +11,7 @@ RUN apt-get -y install nginx
 
 RUN mkdir /srv/www
 
-ADD default /etc/nginx/sites-available/default.conf
+ADD default.conf /etc/nginx/sites-available/default.conf
 ADD nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /srv/www
