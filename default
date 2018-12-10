@@ -8,14 +8,7 @@ server {
     server_name localhost;
 
     location / {
+        include /etc/nginx/mime.types;
         try_files $uri $uri/ /index.html;
-    }
-
-    location ~ \.css {
-        add_header Content-Type text/css;
-    }
-
-    location ~ \.js {
-        add_header Content-Type application/x-javascript;
     }
 }

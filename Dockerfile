@@ -11,13 +11,13 @@ RUN apt-get -y install nginx
 
 RUN mkdir /srv/www
 
-ADD default.conf /etc/nginx/sites-available/default.conf
+ADD default /etc/nginx/sites-available/default
 ADD nginx.conf /etc/nginx/nginx.conf
 
 WORKDIR /srv/www
 
 ADD . /srv/www/
-RUN bundle install --clean --without development test
+RUN bundle install --without development test
 RUN exec middleman build --verbose
 
 EXPOSE 80
