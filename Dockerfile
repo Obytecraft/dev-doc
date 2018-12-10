@@ -20,7 +20,7 @@ ADD . /srv/www/
 RUN bundle install --without development test
 RUN exec middleman build --verbose
 
-COPY /srv/www/build/stylesheets /srv/www/build/stylesheets/dev-doc/
+# COPY /srv/www/build/stylesheets /srv/www/build/stylesheets/dev-doc/
 
 EXPOSE 80
 
