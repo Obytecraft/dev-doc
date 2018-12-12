@@ -35,7 +35,7 @@ The purpose of this document is to start to define the playing field of the solu
 
 
 ### Our Target
-To make it possible :
+To make it possible:
 * I master with some internal skills my service/solutions : developers, product owner and technical architect.
 * Before developing a new service, I have to check that this service does not already exist and I can later decide to amend it or redevelop it if it makes sense for me, respecting the playing field.
 * Each single functions of my solutions should be developed open, generic and connectable using web API.
