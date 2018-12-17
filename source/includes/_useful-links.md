@@ -12,6 +12,8 @@ It is highly advisable to checkout our cheat sheets prepared by the Tech and Tal
 2. <a href ="https://developers.decathlon.com/">Decathlon Developer Website</a>
 3. <a href ="https://techandtalents.subsidia.org">Tech and Talents</a>
 3. <a href ="https://techradar.subsidia.org/?sheetId=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1bknYK2r8pm_vazSNWk0v4hGnB9MgUk4Bj4mIs98TmtQ%2Fedit%23gid%3D0http://">Our Technologies</a>
+4. <a href ="https://tech-china-doc.subsidia.org/#what-is-ci-cd">CI/CD Documentation</a>
+
 
 ## Good Reads
 1. <a href ="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/">Docker File Standardization</a>

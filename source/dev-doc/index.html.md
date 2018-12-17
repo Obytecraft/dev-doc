@@ -14,6 +14,7 @@ includes:
   - day-with-tech
   - know-your-mentor
   - exchange-with-tech-leads
+  - github
   - useful-links
 
 search: true

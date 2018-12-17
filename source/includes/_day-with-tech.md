@@ -1,4 +1,4 @@
-# A Day with Technical Leader
+# Technical Leader
 You will spend a whole or half a day with your technical lead. It's his / her responsibility to aid you in integrating into 
 the technical environment of Decathlon. Be ready to spend a lot of time with him / her. You will be introduced to most of the tools which you will be working with. 
 
