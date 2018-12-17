@@ -8,6 +8,12 @@ The purpose of this document is to serve as a guide for you. This will help you 
 ## The Playing Field
 At Decathlon, you own your personal development. There will be occasions when other engineers will share their experience with other technologies or tools. 
 Make sure you sign up for those ones if you have the time to spare.  
+
+## Skills You Can Develop
+The Solutions and Technology team cares about your development as an Engineer. Due to that, we have compounded a list of skills
+you can develop. 
+[Kindly click here to view](https://docs.google.com/document/d/14qkhAFupN_Kb3_HYKVU2pqwgId4RJVPqH5xgf1FHYfk/edit?ts=5c173aaa)
+
 ### The Rule 
 In Decathlon, we rely on the ```70% + 20% + 10%``` rule. 
 This means, you need to ```70%``` do things by yourself. In short, you learn by practising. The
