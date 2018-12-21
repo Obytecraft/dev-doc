@@ -5,8 +5,8 @@ is based on the technological stack that we use daily.
 
 
 ## Laptop
-We offer a Dell 5520 / Lenovo P51 PC which will be pre-configured with most of the internal softwares that you will need. This is only 
-considered on special cases. 
+We offer a Dell 5520 / Lenovo P51 PC which will be pre-configured with most of the internal softwares that you will need. An Apple Macbook 
+laptop is provided on special cases. 
 
 ```Details
       * 16GB Memory

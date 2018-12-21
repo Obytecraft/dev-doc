@@ -10,7 +10,7 @@ At Decathlon, you own your personal development. There will be occasions when ot
 Make sure you sign up for those ones if you have the time to spare.  
 
 ## Skills You Can Develop
-The Solutions and Technology team cares about your development as an Engineer. Due to that, we have compounded a list of skills
+The Solutions and Technology team cares about your development as an Engineer. Due to that, we have compounded a list of skills and it's know-hows that
 you can develop. 
 [Kindly click here to view](https://docs.google.com/document/d/14qkhAFupN_Kb3_HYKVU2pqwgId4RJVPqH5xgf1FHYfk/edit?ts=5c173aaa)
 
@@ -60,14 +60,14 @@ To make it possible:
     <td>I have to manage my product life cycle (road maps, releases, end of life …)</td>
   </tr>
   <tr>
-    <td>My solution/product should manage an ascendant compatibility to ensure a perennity of the service I deliver</td>
+    <td>My solution/product should manage an ascendant compatibility to ensure a perennial state of the service I deliver</td>
   </tr>
   <tr>
     <td>When I develop a service/solution I have the responsibility to identify the right level of granularity, to make my function re-usable.</td>
   </tr>
   <tr>
     <td>
-I choose the best adapted technology to implement my service AND ensure its perennity</td>
+I choose the best adapted technology to implement my service AND ensure its Perennial state</td>
   </tr>
   <tr>
     <td>
