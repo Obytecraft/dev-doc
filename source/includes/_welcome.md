@@ -1,6 +1,7 @@
 # Welcome
 We want to officially welcome you to Decathlon as a developer. We warmly welcome you. oh! first advice,
-get to know the team members quickly.  
+get to know the team members quickly. To get noticed in the tech community quickly, send an introductory
+email to <a href ="mailto:cndevs@decathlon.net">China Developers Community</a> so we get to know you and your tech stack.
 
 ## Purpose
 The purpose of this document is to serve as a guide for you. This will help you integrate faster as a developer. It is advisable to take your time and treat this document as an integral part of your general induction.
@@ -14,11 +15,10 @@ The Solutions and Technology team cares about your development as an Engineer. D
 you can develop. 
 [Kindly click here to view](https://docs.google.com/document/d/14qkhAFupN_Kb3_HYKVU2pqwgId4RJVPqH5xgf1FHYfk/edit?ts=5c173aaa)
 
-### The Rule 
-In Decathlon, we rely on the ```70% + 20% + 10%``` rule. 
+### Little Advice
 This means, you need to ```70%``` do things by yourself. In short, you learn by practising. The
-```20%``` for asking for help from other experienced developers around, peer review / programming, and coaching. The ```10%``` is the use of
-Google.
+```20%``` for asking for help from other experienced developers around, peer review / programming, and coaching. The ```10%``` is for trainings and
+ searching the internet.
 
 ### Context 
 * Decathlon carries on its acceleration and expansion strategies. We open new countries and lots of new stores.
@@ -42,6 +42,12 @@ This network will use our existing Worldwide pool of teammates (In France, India
 To make it possible and efficient we need to have a frame of collaboration, our playing field. 
 The purpose of this document is to start to define the playing field of the solutions that we will design or manage. 
 
+### S & T Team Structure
+S&T is made up of several teams that work together to achieve a common goal.
+It is therefore good to know the teams. 
+Refer to image below and click link to read more. 
+[ S&T Team Structure](https://docs.google.com/presentation/d/1yGgW5zx-xxaTk3D7DbZax8-UboDiSvoevMigPWWOQxo/edit#slide=id.g4702197040_0_249)
+![Alt text](/dev-doc/images/TeamStructure.PNG)
 
 ### Our Target
 To make it possible:
@@ -94,6 +100,7 @@ I challenge my product technical choices by the community (Tech N Talents)</td>
 ## DecFactors
 DecFactors, in one way or the other defines our technical culture. We are striving 
 hard to becoming all the factors below. We are not there yet but we are getting there. 
+![Alt text](/dev-doc/images/DecFactors.png)
 
 1. API first, but not API only
 2. You build it, YOU run it
